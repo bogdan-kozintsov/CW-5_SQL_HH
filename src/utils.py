@@ -8,7 +8,7 @@ employer_ids = [9694561, 4219, 5919632, 5667343, 9301808, 774144, 10571093, 1986
 
 def get_employee_data():
     """
-    функция для получения данных о компаниях с сайта HH.ru
+    Функция для получения данных о компаниях с сайта HH.ru
     :return: список компаний
     """
     employers = []
@@ -26,8 +26,8 @@ def get_vacancies_data():
     :return: список вакансий
     """
     vacancy = []
-    for vacacies_id in employer_ids:
-        url_vac = f"https://api.hh.ru/vacancies?employer_id={vacacies_id}"
+    for vacancies_id in employer_ids:
+        url_vac = f"https://api.hh.ru/vacancies?employer_id={vacancies_id}"
         vacancy_info = requests.get(url_vac, params={'page': 0, 'per_page': 100}).json()
         vacancy.extend(vacancy_info['items'])
 
