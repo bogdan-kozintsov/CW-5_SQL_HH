@@ -1,7 +1,7 @@
-import requests
-import psycopg2
 from typing import Any
 
+import psycopg2
+import requests
 
 employer_ids = [9694561, 4219, 5919632, 5667343, 9301808, 774144, 10571093, 198614, 6062708, 4306]
 
